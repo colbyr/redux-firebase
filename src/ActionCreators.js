@@ -1,8 +1,8 @@
 import {
-  FIREBASE_PATHS_SYNCED,
-  FIREBASE_PATHS_SUBSCRIBED,
-  FIREBASE_PATHS_UNSUBSCRIBED,
-} from '../constants/ActionTypes'
+  PATHS_SYNCED,
+  PATHS_SUBSCRIBED,
+  PATHS_UNSUBSCRIBED,
+} from './ActionTypes'
 import { createAction } from 'redux-actions'
 
 const doSubscribe = createAction(FIREBASE_PATHS_SUBSCRIBED)
