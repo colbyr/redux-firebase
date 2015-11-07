@@ -1,1 +1,1 @@
-import firebase from './firebase';
+export createFirebaseMiddleWare from './createFirebaseMiddleWare'
