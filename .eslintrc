@@ -1,0 +1,9 @@
+{
+  "extends": "rackt",
+  "rules": {
+    "valid-jsdoc": 2
+  },
+  "plugins": [
+    "react"
+  ]
+}
