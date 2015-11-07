@@ -1,0 +1,27 @@
+{
+  "name": "reduxfire",
+  "version": "0.1.0",
+  "description": "Declarative firebase queries for redux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colbyr/reduxfire.git"
+  },
+  "keywords": [
+    "firebase",
+    "redux",
+    "react"
+  ],
+  "author": "Colby Rabideau <idontknow5691@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colbyr/reduxfire/issues"
+  },
+  "homepage": "https://github.com/colbyr/reduxfire#readme",
+  "devDependencies": {
+    "jest-cli": "^0.7.1"
+  }
+}
