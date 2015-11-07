@@ -6,7 +6,7 @@ import {
   isLoading,
   resolve,
   subscriptions,
-} from './query/queries'
+} from './queries'
 import { partial } from 'ramda'
 import React, { PropTypes } from 'react'
 import ComponentWithPureRender from 'react-addons-pure-render-mixin'
@@ -26,7 +26,7 @@ function select(query, rootState, rootProps) {
   }
 }
 
-export const fetch = query => (Component, LoadingComponent = UILoading) => {
+export default query => (Component, LoadingComponent = UILoading) => {
   return connectRedux(
     partial(select, [query])
   )(

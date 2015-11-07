@@ -1,0 +1,5 @@
+const PREFIX = '@@redux-firebase/'
+
+export const PATHS_SUBSCRIBED = `${PREFIX}PATHS_SUBSCRIBED`
+export const PATHS_SYNCED = `${PREFIX}PATHS_SYNCED`
+export const PATHS_UNSUBSCRIBED = `${PREFIX}PATHS_UNSUBSCRIBED`

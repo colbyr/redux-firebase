@@ -1,13 +1,9 @@
-import {
-  FIREBASE_PATHS_SUBSCRIBED,
-  FIREBASE_PATHS_UNSUBSCRIBED,
-} from '../../constants/ActionTypes'
+import { PATHS_SUBSCRIBED, PATHS_UNSUBSCRIBED } from './ActionTypes'
 import debounce from 'debounce'
-import { sync } from '../../actionCreators/FirebaseActionCreators'
-import FirebaseSubscriptionRecord
-  from '../records/FirebaseSubscriptionRecord'
+import { sync } from './ActionCreators'
 import { fromJS, Map } from 'immutable'
 import { partial } from 'ramda'
+import SubscriptionRecord from './SubscriptionRecord'
 
 function toStringPath(arrayPath) {
   return arrayPath.join('/')
@@ -32,7 +28,7 @@ function subscribe(
     .on('value', handleUpdate, handleError)
   return subscriptions.set(
     path,
-    FirebaseSubscriptionRecord()
+    SubscriptionRecord()
       .set('handler', handleUpdate)
       .updateIn(['subscribers'], subs => subs.add(sid))
   )
