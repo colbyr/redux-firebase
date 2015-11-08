@@ -1,6 +1,6 @@
 {
   "name": "redux-firebase",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Declarative firebase queries for redux.",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "check": "npm run lint && npm run test",
     "clean": "rm -rf lib",
     "lint": "eslint src",
-    "prepublish": "npm run clean && npm run build",
+    "postinstall": "npm run clean && npm run build",
     "test": "jest"
   },
   "repository": {
@@ -30,7 +30,7 @@
   "peerDependencies": {
     "firebase": "^2.3.1",
     "immutable": "^3.7.4",
-    "ramda": "^0.18.0"
+    "ramda": "^0.18.0",
     "react": "^0.14.2",
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
