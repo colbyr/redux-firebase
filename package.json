@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
+    "build-dev": "babel src --out-dir lib --watch",
     "check": "npm run lint && npm run test",
     "clean": "rm -rf lib",
     "lint": "eslint src",
@@ -26,10 +27,14 @@
     "url": "https://github.com/colbyr/redux-firebase/issues"
   },
   "homepage": "https://github.com/colbyr/redux-firebase#readme",
-  "dependencies": {
+  "peerDependencies": {
     "firebase": "^2.3.1",
     "immutable": "^3.7.4",
     "ramda": "^0.18.0"
+    "react": "^0.14.2",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.4",
+    "redux-actions": "^0.8.0"
   },
   "devDependencies": {
     "babel": "^5.5.8",

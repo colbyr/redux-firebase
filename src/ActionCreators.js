@@ -5,17 +5,17 @@ import {
 } from './ActionTypes'
 import { createAction } from 'redux-actions'
 
-const doSubscribe = createAction(FIREBASE_PATHS_SUBSCRIBED)
+const doSubscribe = createAction(PATHS_SUBSCRIBED)
 export function subscribe(sid, paths) {
   return doSubscribe({paths, sid})
 }
 
-const doSync = createAction(FIREBASE_PATHS_SYNCED)
+const doSync = createAction(PATHS_SYNCED)
 export function sync(updates) {
   return doSync(updates)
 }
 
-const doUnsubscribe = createAction(FIREBASE_PATHS_UNSUBSCRIBED)
+const doUnsubscribe = createAction(PATHS_UNSUBSCRIBED)
 export function unsubscribe(sid, paths) {
   return doUnsubscribe({paths, sid})
 }

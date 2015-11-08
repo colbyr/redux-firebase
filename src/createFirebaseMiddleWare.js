@@ -69,7 +69,7 @@ export default function createFirebaseMiddleware(firebaseInstance) {
     syncUpdates(store)
   }
   return store => next => action => {
-    if (action.type === FIREBASE_PATHS_SUBSCRIBED) {
+    if (action.type === PATHS_SUBSCRIBED) {
       action.payload.paths.forEach(path => {
         let stringPath = toStringPath(path)
         subscriptions = subscribe(
@@ -82,7 +82,7 @@ export default function createFirebaseMiddleware(firebaseInstance) {
         )
       })
     }
-    if (action.type === FIREBASE_PATHS_UNSUBSCRIBED) {
+    if (action.type === PATHS_UNSUBSCRIBED) {
       action.payload.paths.forEach(path => {
         subscriptions = unsubscribe(
           subscriptions,

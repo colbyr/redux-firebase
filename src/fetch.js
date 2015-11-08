@@ -1,7 +1,7 @@
 import {
   subscribe,
   unsubscribe,
-} from '../../actionCreators/FirebaseActionCreators'
+} from './ActionCreators'
 import {
   isLoading,
   resolve,
@@ -9,9 +9,7 @@ import {
 } from './queries'
 import { partial } from 'ramda'
 import React, { PropTypes } from 'react'
-import ComponentWithPureRender from 'react-addons-pure-render-mixin'
 import { connect as connectRedux } from 'react-redux'
-import UILoading from '../../components/ui/UILoading'
 
 let ids = 0
 function nextSID() {
@@ -26,16 +24,12 @@ function select(query, rootState, rootProps) {
   }
 }
 
-export default query => (Component, LoadingComponent = UILoading) => {
+export default defaultLoadingComponent => query => (Component, LoadingComponent = defaultLoadingComponent) => {
   return connectRedux(
     partial(select, [query])
   )(
     React.createClass({
       displayName: `Firebase(${Component.displayName})`,
-
-      mixins: [
-        ComponentWithPureRender,
-      ],
 
       propTypes: {
         dispatch: PropTypes.func.isRequired,

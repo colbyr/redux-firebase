@@ -1,4 +1,13 @@
-export createFirebaseMiddleWare from './createFirebaseMiddleWare'
-export fetch from './fetch'
-export resolvers from './resolvers'
-export operations from './operations'
+import createFirebaseMiddleware from './createFirebaseMiddleware'
+import createFirebaseReducers from './createFirebaseReducers'
+import fetch from './fetch'
+import * as resolvers from './resolvers'
+import operations from './operations'
+
+export default {
+  createFirebaseMiddleware,
+  createFirebaseReducers,
+  fetch,
+  operations,
+  resolvers,
+}
