@@ -1,6 +1,6 @@
 {
   "name": "redux-firebase",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Declarative firebase queries for redux.",
   "main": "lib/index.js",
   "scripts": {
@@ -46,14 +46,5 @@
     "eslint-config-rackt": "1.0.0",
     "eslint-plugin-react": "^3.6.3",
     "jest-cli": "^0.7.1"
-  },
-  "npmName": "redux-firebase",
-  "npmFileMap": [
-    {
-      "basePath": "/lib/",
-      "files": [
-        "*.js"
-      ]
-    }
-  ]
+  }
 }
